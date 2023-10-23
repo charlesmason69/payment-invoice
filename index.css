@@ -15,7 +15,7 @@ body {
 .docu-body{
     padding: 20px 30px;
     border-radius: 15px;
-    background: url('./assets/blur_bg.jpg') no-repeat; 
+    background: url('./blur_bg.jpg') no-repeat; 
     width: 100%;
     height: 100vh;
     background-size: cover;
