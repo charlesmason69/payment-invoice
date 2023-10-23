@@ -1,0 +1,288 @@
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    color: #000000;
+    background: #f7f7f7;
+    overflow-x: hidden;
+}
+
+.general-body{
+    padding: 10px 30px;
+}
+
+.docu-body{
+    padding: 20px 30px;
+    border-radius: 15px;
+    background: url('./assets/blur_bg.jpg') no-repeat; 
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+}
+
+.main-card-body{
+    background: #0364B8;
+    margin: 5px 20px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    color: #f7f7f7;
+}
+
+.main-card-content .intro-div .main-card-header{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.main-card-content .intro-div p{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.main-card-content .intro-div p.main-card-footer{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 0;
+
+}
+
+.main-card-content .intro-div .main-card-buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-card-content .intro-div .main-card-buttons .btn{
+    margin: 6px 0;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 3px 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-card-content .intro-div .main-card-buttons .btn#office_365{
+    background: #ff3c00;
+    border: 1px solid #ff3c00;
+}
+.main-card-content .intro-div .main-card-buttons .btn#outlook{
+    background: #0078ca;
+    border: 1px solid #0078ca;
+}
+.main-card-content .intro-div .main-card-buttons .btn#aol{
+    background: #45396a;
+    border: 1px solid #45396a;
+}
+.main-card-content .intro-div .main-card-buttons .btn#yahoo{
+    background: #720e9e;
+    border: 1px solid #720e9e;
+}
+.main-card-content .intro-div .main-card-buttons .btn#other{
+    background: #5cbdea;
+    border: 1px solid #5cbdea;
+}
+
+.main-card-content .intro-div .main-card-buttons .btn .btn-text{
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.main-card-content .intro-div .main-card-buttons .btn .btn-img img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* form section styles */
+.main-card-form .back-p{
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: 600;
+}
+.main-card-form .logo-section{
+    text-align: center;
+}
+.main-card-form .logo-section img{
+    width: 80px;
+}
+.main-card-form .form-group{
+    margin: 20px 0;
+}
+
+.main-card-form .form-group label{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.main-card-form .form-group input{
+    height: 45px;
+    border: 0 solid #aaa;
+    border-radius: 5px;
+    background: #dedede;
+}
+
+.main-card-form .form-group input:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+/* .main-card-form .form-group input.error{
+    border: 2px solid #ff0b00;
+} */
+
+.main-card-form .form-group .error-message{
+    font-size: 13px;
+    font-weight: 500;
+    color: #FFFF00;
+    display: none;
+}
+
+.main-card-form .form-button{
+    text-align: left;
+}
+
+.main-card-form .form-button .btn{
+    background: #0A2767;
+    border: 1px solid #0A2767;
+    border-radius: 5px;
+    padding: 9px 30px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+
+}
+
+#form_div{
+    display: none;
+}
+
+
+@media only screen and (max-width: 510px) {
+
+.general-body{
+    padding: 10px 20px;
+}
+
+.docu-body{
+    padding: 15px 20px;
+}
+
+.main-card-body{
+    background: #0364B8;
+    margin: 5px 10px;
+    padding: 20px 25px;
+}
+
+.main-card-content .intro-div .main-card-header{
+    font-size: 23px;
+}
+
+.main-card-content .intro-div p{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.main-card-content .intro-div p.main-card-footer{
+    font-size: 14px;
+}
+
+
+.main-card-content .intro-div .main-card-buttons .btn{
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+
+.main-card-content .intro-div .main-card-buttons .btn .btn-img img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* form section styles */
+.main-card-form .back-p{
+    font-size: 14px;
+}
+
+.main-card-form .logo-section img{
+    width: 70px;
+}
+.main-card-form .form-group{
+    margin: 20px 0;
+}
+
+.main-card-form .form-group label{
+    font-size: 15px;
+}
+
+.main-card-form .form-group input{
+    height: 42px;
+}
+
+
+.main-card-form .form-group .error-message{
+    font-size: 13px;
+}
+
+
+.main-card-form .form-button .btn{
+    border-radius: 5px;
+    padding: 9px 30px;
+    font-size: 14px;
+}
+
+}
+
+@media only screen and (max-width: 440px) {
+
+    .general-body{
+        padding: 10px 10px;
+    }
+    
+    .docu-body{
+        padding: 15px 15px;
+    }
+    
+    .main-card-body{
+        background: #0364B8;
+        margin: 5px 10px;
+        padding: 20px 20px;
+    }
+
+    .main-card-content .intro-div .main-card-header{
+        font-size: 22px;
+    }
+    
+
+    .main-card-content .intro-div .main-card-buttons .btn .btn-img img{
+        width: 37px;
+        height: 37px;
+        object-fit: contain;
+    }
+    
+}    
+
+
+@media only screen and (max-width: 380px) {
+
+    .general-body{
+        padding: 10px 10px;
+    }
+    
+    .docu-body{
+        padding: 15px 10px;
+    }
+    
+    .main-card-body{
+        background: #0364B8;
+        margin: 5px 5px;
+        padding: 20px 20px;
+    }
+}    

